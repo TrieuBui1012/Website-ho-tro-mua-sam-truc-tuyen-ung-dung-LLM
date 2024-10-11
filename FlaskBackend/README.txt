@@ -8,7 +8,7 @@ How to run Flask Backend API server:
 - Create user with username is "root" and password is "12345"
 - Run MySQL Workbench, connect to localinstance using username and password created above
 - Choose Data Import/Restore
-- Choose Import from Self-Contained File
+- Choose Import from Self-Contained File and choose Dump.sql file from this folder
 - Create a new Schema called "ShoppingAssistant"
 - Click "Start Import"
 3. Run server
