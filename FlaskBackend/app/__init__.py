@@ -17,6 +17,9 @@ def create_app(test_config = None):
         # load the test config if passed in
         app.config.from_mapping(test_config)
 
+    app.route('/')(lambda: '<h1 style="color:blue; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; font-size:50px; font-weight: bold;">Backend sever is now running!</h1>')
+
+    
     from . import db
     db.init_app(app)
 
@@ -28,5 +31,11 @@ def create_app(test_config = None):
 
     from . import product
     app.register_blueprint(product.bp)
+
+    from . import tracking
+    app.register_blueprint(tracking.bp)
+
+    from . import admin
+    app.register_blueprint(admin.bp)
 
     return app
